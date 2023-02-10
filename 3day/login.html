@@ -1,17 +1,103 @@
-<form>
-    <div>
-        <label>E-mail</label>
-        <input type="text">
-    </div>
-    <div>
-        <label>Şifre:</label>
-        <input type="password">
-    </div>
-        <div>
-        <label>Beni Hatırla</label>
-        <input type="checkbox">
-    </div>
-    <div>
-        <input type="button" value="Giriş">
-    </div>
-</form>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/reset.css" />
+    <title>Document</title>
+    <style>
+        form {
+            margin: 20px;
+            background-color: antiquewhite;
+            border: 1px solid rgb(53, 49, 49);
+            padding: 15px;
+            border-radius: 10px;
+            width: 500px;
+
+        }
+
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 16px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px 15px;
+            margin: 5px 0px;
+            border: 2px solid black;
+            border-radius: 7px;
+        }
+
+        .btn {
+            background-color: antiquewhite;
+            color: black;
+            padding: 10px 25px;
+            margin: 10px 10px 10px 0px;
+            border: 1px solid gray;
+            border-radius: 5px;
+            font-size: 20px;
+            font-weight: bold;
+            top: 142px;
+            left: 342px;
+
+        }
+
+        .btn:hover {
+            background-color: rgb(72, 66, 52);
+            color: white;
+            cursor: pointer;
+        }
+
+        input[type="checkbox"] {
+            padding: 10px 15px;
+            margin: 5px 0px;
+            width: 24px;
+            height: 18px;
+        }
+
+        .checkRememberMe {
+            margin: 5px 0;
+            padding: 1px;
+        }
+        #login_wrapper{
+            position: relative;
+        }
+        #reklam{
+            position: fixed;
+            right: 44px;
+            bottom:89px;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border: 2px solid yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <div id="login_wrapper">
+            <div>
+                <label for="textEmail">E-mail</label>
+                <input id="textEmail" type="text">
+            </div>
+            <div>
+                <label for="textPassword">Şifre:</label>
+                <input id="textPassword" type="password">
+            </div>
+            <div>
+                <input type="checkbox">
+                <label id="checkRememberMe">Beni Hatırla</label>
+            </div>
+            <div style="position: ;">
+                <input class="btn" id="btnSignIn" type="button" value="Giriş">
+            </div>
+        </div>
+        <div id="reklam"></div>
+
+    </form>
+</body>
+
+</html>
